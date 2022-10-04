@@ -25,7 +25,7 @@ const Welcome = () => {
               >
                 <div className="block p-6 rounded-lg shadow-lg bg-white w-64">
                   <Link
-                    to={`/${tag}`}
+                    to={`/category/${tag}`}
                     className="text-gray-900 text-xl leading-tight font-medium mb-2"
                   >
                     {label}
