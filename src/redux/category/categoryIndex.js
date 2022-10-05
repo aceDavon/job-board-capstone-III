@@ -7,16 +7,16 @@ import Spinners from '../../components/spinners';
 const CategoryIndex = () => {
   const dispatch = useDispatch();
   const { tag } = useParams();
-  const { search } = useSelector(selectAllJobs);
+  const { jobs } = useSelector(selectAllJobs);
   let filter = [];
   React.useEffect(() => {
     dispatch(Search({ country: 'us' }));
   }, [dispatch]);
-  const check = search.filter((x) => (x.category.tag === tag));
+  const check = jobs.filter((x) => (x.category.tag === tag));
   filter = check;
   return (
     <div className="flex justify-center flex-wrap px-4 gap-2">
-      { search.length > 0
+      { jobs.length > 0
         ? filter.length !== 0
           ? filter.map((x) => {
             const {
@@ -36,7 +36,7 @@ const CategoryIndex = () => {
                   <p className="card-text">
                     {description.slice(0, 125)}
                     { ' ' }
-                    <a href={redirect_url} className="text-blue-600 text-base capitalize" target="_blank">
+                    <a href={redirect_url} className="text-blue-600 text-base capitalize" target="_blank" rel="noreferrer">
                       ...learn more
                     </a>
                   </p>

@@ -1,11 +1,11 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { Search } from '../redux/search/searchSlice';
+import { SearchJobs } from '../redux/search/searchSlice';
 
 const Header = () => {
   const dispatch = useDispatch();
   const [value, setValue] = React.useState({
-    title: '',
+    page: '',
     country: '',
   });
 
@@ -15,7 +15,7 @@ const Header = () => {
 
   const handleClick = (e) => (setValue({ ...value, [e.target.name]: e.target.value }));
 
-  const handleSubmit = () => dispatch(Search(value));
+  const handleSubmit = () => dispatch(SearchJobs(value));
 
   return (
     <div>
@@ -145,10 +145,10 @@ const Header = () => {
               <div>
                 <div className="flex justify-center">
                   <input
-                    type="type"
-                    placeholder="Search for Jobs"
+                    type="number"
+                    placeholder="filter Jobs page number"
                     className="px-2 rounded-md"
-                    name="title"
+                    name="page"
                     onChange={(e) => handleClick(e)}
                   />
                   {/* select dropdown */}
@@ -161,7 +161,9 @@ const Header = () => {
                     >
                       <option defaultValue="">Region</option>
                       {countries.map((x) => (
-                        <option value={x} key={x}>{ x }</option>
+                        <option value={x} key={x}>
+                          {x}
+                        </option>
                       ))}
                     </select>
                   </div>
@@ -169,8 +171,10 @@ const Header = () => {
                 <div className="w-full mt-4">
                   <button
                     type="button"
+                    className="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
+                    data-bs-toggle="modal"
+                    data-bs-target="#exampleModalScrollable"
                     onClick={() => handleSubmit()}
-                    className="bg-blue-600 text-white rounded-md mx-2 px-4 py-2"
                   >
                     Search
                   </button>

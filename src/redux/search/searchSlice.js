@@ -1,19 +1,20 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-export const fetchJobs = createAsyncThunk('jobs/fetch', async () => {
+export const Search = createAsyncThunk('jobs/fetch', async (value) => {
+  const { country } = value;
   try {
-    return await axios('https://api.adzuna.com/v1/api/jobs/gb/search/1?app_id=29d627a9&app_key=e3d994a108934b7d72bca670554996f5').then((res) => res.data);
+    return await axios(`https://api.adzuna.com/v1/api/jobs/${country}/search/1?app_id=29d627a9&app_key=e3d994a108934b7d72bca670554996f5`).then((res) => res.data);
   } catch (error) {
-    return error.message;
+    return error;
   }
 });
 
-export const Search = createAsyncThunk('search/fetch', async (value) => {
-  const { country } = value;
+export const SearchJobs = createAsyncThunk('search/fetch', async (value) => {
+  const { country, page } = value;
   try {
     return await axios(
-      `https://api.adzuna.com/v1/api/jobs/${country}/search/1?app_id=29d627a9&app_key=e3d994a108934b7d72bca670554996f5`,
+      `https://api.adzuna.com/v1/api/jobs/${country}/search/${page}?app_id=29d627a9&app_key=e3d994a108934b7d72bca670554996f5`,
     ).then((res) => res.data);
   } catch (error) {
     return error;
@@ -28,25 +29,22 @@ const searchSlice = createSlice({
   },
   extraReducers: (Builder) => {
     Builder
-      .addCase(fetchJobs.pending, (state) => ({
-        ...state,
-        status: 'pending',
-      }))
-      .addCase(fetchJobs.fulfilled, (state, { payload }) => ({
-        ...state,
-        jobs: payload.results,
-        status: 'idle',
-      }))
-      .addCase(fetchJobs.rejected, (state, { error }) => ({
-        ...state,
-        status: error,
-      }))
       .addCase(Search.pending, (state) => ({
         ...state,
         status: 'searching',
       }))
       .addCase(Search.fulfilled, (state, { payload }) => ({
         ...state,
+        jobs: payload.results,
+        status: 'idle',
+      }))
+      .addCase(SearchJobs.pending, (state) => ({
+        ...state,
+        status: 'searching',
+      }))
+      .addCase(SearchJobs.fulfilled, (state, { payload }) => ({
+        ...state,
+        status: 'idle',
         search: payload.results,
       }));
   },
