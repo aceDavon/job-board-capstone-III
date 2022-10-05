@@ -49,7 +49,7 @@ const SearchIndex = () => {
                         <span className="text-xs font-thin text-gray-700 block">
                           {company.display_name}
                         </span>
-                        <h5 className="text-gray-900 text-xl font-semibold leading-tight font-medium mb-2 capitalize">
+                        <h5 className="text-gray-900 text-xl font-semibold leading-tight mb-2 capitalize">
                           {title}
                         </h5>
                         <p className="text-gray-700 text-base mb-4">

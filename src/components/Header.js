@@ -47,7 +47,7 @@ const Header = () => {
                   />
                 </svg>
               </button>
-              <a className="navbar-brand text-blue-600" href="#!">
+              <a className="navbar-brand text-blue-600" href="/">
                 <svg
                   className="w-5 h-5 ml-2 lg:ml-0 mr-2"
                   xmlns="http://www.w3.org/2000/svg"
