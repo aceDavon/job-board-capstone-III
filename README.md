@@ -16,13 +16,17 @@
 
 > [Netlify Deplyment](https://elegant-selkie-f91b3f.netlify.app/)
 
+## Video Presentation
+
+> [GDrive video](https://drive.google.com/file/d/11ybaE4G1qRnHbyTZbBF7ceUTacqPrzBP/view?usp=sharing)
+
 
 ## Mockup 
 
 > Multi devices
 
 
-<img src="./src/img/mockup/devices.png" alt="mobile-image" width="355px" />
+<img src="./src/img/mockup/devices.png" alt="mobile-image" width="455px" />
 
 
 ## Getting Started
@@ -30,7 +34,7 @@
 ### To have a copy of this project running on your local machine, follow these commands:
 
 - Clone this repo to your local machine
-  -  `git clone git@github.com:traveler-hub/job-board-capstone-III
+  -  `git clone git@github.com:aceDavon/job-board-capstone-III
 `
   - Open the folder "job-board-capstone-III
  and run `npm install` to install all necesary scripts,

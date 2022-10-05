@@ -20,10 +20,10 @@ const Welcome = () => {
             const { tag, label } = x;
             return (
               <div
-                className="flex justify-center basis-60 grow relative"
+                className="flex justify-center"
                 key={tag}
               >
-                <div className="block p-6 rounded-lg shadow-lg bg-white w-64">
+                <div className="block p-6 rounded-lg shadow-lg bg-white w-40 lg:w-64 grow">
                   <Link
                     to={`/category/${tag}`}
                     className="text-gray-900 text-xl leading-tight font-medium mb-2"
