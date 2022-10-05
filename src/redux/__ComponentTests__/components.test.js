@@ -34,7 +34,7 @@ describe('test for all components', () => {
             </Route>
           </Routes>
         </BrowserRouter>
-      </Provider>
+      </Provider>,
     );
     expect(category).toMatchSnapshot();
   });
