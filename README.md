@@ -12,9 +12,9 @@
 - ReactJs, tailwindCSS
 - Git, GitHub, Git workflow, Jest
 
-## Live Demo (if available)
+## Deployments
 
-[Coming soon](https://livedemo.com)
+> [Netlify Deplyment](https://elegant-selkie-f91b3f.netlify.app/)
 
 
 ## Mockup 
