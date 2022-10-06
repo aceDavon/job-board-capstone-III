@@ -24,7 +24,8 @@
     "import/no-unresolved": "off",
     "no-shadow": "off",
     "camelcase": "off",
-    "quote-props": "off"
+    "quote-props": "off",
+    "no-nested-ternary": "off"
   },
   "ignorePatterns": ["dist/", "build/", "tailwind.config.js"]
 }

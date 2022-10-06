@@ -1,9 +1,10 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
+import { appId, appkey } from '../../components/common/data';
 
 export const fetchCategory = createAsyncThunk('category/fetch', async () => {
   try {
-    return await axios('https://api.adzuna.com/v1/api/jobs/gb/categories?app_id=29d627a9&app_key=e3d994a108934b7d72bca670554996f5',
+    return await axios(`https://api.adzuna.com/v1/api/jobs/gb/categories?app_id=${appId}&app_key=${appkey}`,
       {
         method: 'GET',
         headers: {

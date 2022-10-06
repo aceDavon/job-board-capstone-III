@@ -1,70 +1,107 @@
-# Getting Started with Create React App
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Job-Board-capstone-III
 
-## Available Scripts
 
-In the project directory, you can run:
+> This is an Educational Project for the Microverse Module 3 (React-Redux) capstone. It is built with React, Redux/Toolkit, TailwindCSS, Tailwind Elements and React Linters for enforcing standard coding react coding practice. The Project is aimed at fetching API data, displaying same and query the API endpoints for searched data for Job listings in different countries in Europe and also in South Africa. This project is MIT Licensed
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Built With
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- JavaScript
+- ReactJs, tailwindCSS
+- Git, GitHub, Git workflow, Jest
 
-### `npm test`
+## Deployments
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+> [Netlify Deplyment](https://elegant-selkie-f91b3f.netlify.app/)
 
-### `npm run build`
+## Video Presentation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+> [GDrive video](https://drive.google.com/file/d/11ybaE4G1qRnHbyTZbBF7ceUTacqPrzBP/view?usp=sharing)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Mockup 
 
-### `npm run eject`
+> Multi devices
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<img src="./src/img/mockup/devices.png" alt="mobile-image" width="455px" />
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Getting Started
 
-## Learn More
+### To have a copy of this project running on your local machine, follow these commands:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Clone this repo to your local machine
+  -  `git clone git@github.com:aceDavon/job-board-capstone-III
+`
+  - Open the folder "job-board-capstone-III
+ and run `npm install` to install all necesary scripts,
+  - Run from your termminal, `npm start` to open the project in your browser.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+**This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).**
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+To get a local copy up and running follow these simple example steps.
 
-### Analyzing the Bundle Size
+### Prerequisites
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- [NodeJS](https://nodejs.org/en/docs/)
 
-### Making a Progressive Web App
+> As an asynchronous event-driven JavaScript runtime, Node.js is designed to build scalable network applications. In the following "hello world" example, many connections can be handled concurrently. Upon each connection, the callback is fired, but if there is no work to be done, Node.js will sleep.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- [Text Editor(VScode Recommended)](https://code.visualstudio.com/)
 
-### Advanced Configuration
+> Visual Studio Code is a free coding editor that helps you start coding quickly. Use it to code in any programming language, without switching editors.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Setup
+
+**Run from your terminal:**
+
+- `npx create-react-app ./`
+
+**cd into space-traveler-hub folder, then run from your terminal:**
+
+- `npm start`
+
+### Usage
+
+**When the above commands aresuccessfully run, your browser should open on `localhost:3000`, if not, open your browser and load `127.0.0.1:3000` to see your default template loaded**
+
+### Run tests
+
+> coming soon :smile:
 
 ### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+> coming soon :smile:
 
-### `npm run build` fails to minify
+## Authors
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+👤 **Makoji David**
+
+- GitHub: [@aceDavon](https://github.com/aceDavon)
+- Twitter: [@sharkleshevon](https://twitter.com/sharkleshevon)
+- LinkedIn: [Makoji David](https://www.linkedin.com/in/makoji-david/)
+
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](../../issues/).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- Hat tip to anyone whose code was used
+- Inspiration
+- etc
+
+## 📝 License
+
+This project is [MIT](./MIT.md) licensed.

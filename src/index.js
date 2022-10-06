@@ -7,6 +7,7 @@ import App from './App';
 import 'tw-elements';
 import Welcome from './welcome';
 import Store from './redux/configureStore';
+import CategoryIndex from './components/categoryIndex';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -15,6 +16,9 @@ root.render(
       <Routes>
         <Route path="/" element={<App />}>
           <Route element={<Welcome />} index />
+          <Route path="/category">
+            <Route path=":id" element={<CategoryIndex />} />
+          </Route>
         </Route>
       </Routes>
     </BrowserRouter>
