@@ -1,8 +1,8 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { Link, useParams } from 'react-router-dom';
-import Spinners from '../../components/spinners';
-import { selectAllJobs } from '../search/searchSlice';
+import Spinners from './spinners';
+import { selectAllJobs } from '../redux/search/searchSlice';
 
 const CategoryIndex = () => {
   const { id } = useParams();

@@ -14,15 +14,21 @@ const Welcome = () => {
       <p className="text-center capitalize font-thin text-slate-400">
         -- Browse jobs by category --
       </p>
-      <div className="flex justify-center my-4 gap-2 flex-wrap px-6">
+      <div className="flex justify-center my-4 gap-2 flex-wrap px-6 even:bg-gray-100">
         {jobs.length > 0 && status === 'idle' ? (
           jobs.map((x) => {
             const {
-              title, description, id, location, company, category, salary_is_predicted,
+              title,
+              description,
+              id,
+              location,
+              company,
+              category,
+              salary_is_predicted,
             } = x;
             return (
               <div className="flex justify-center" key={id}>
-                <div className="block p-6 rounded-lg shadow-lg bg-white w-40 lg:w-64 grow">
+                <div className="block p-6 rounded-lg shadow-lg bg-white even:bg-gray-100 w-40 lg:w-64 grow">
                   <div className="border-b px-2 py-1 mb-4 flex flex-col">
                     <span className="text-xs font-thin text-slate-400">
                       {location.display_name}
@@ -48,7 +54,10 @@ const Welcome = () => {
                     {salary_is_predicted !== '0' ? (
                       `$ ${x.salary_max}`
                     ) : (
-                      <span className="font-thin text-sm italic"> Pay not supplied</span>
+                      <span className="font-thin text-sm italic">
+                        {' '}
+                        Pay not supplied
+                      </span>
                     )}
                   </p>
                 </div>
@@ -58,7 +67,13 @@ const Welcome = () => {
         ) : status === 'searched' ? (
           search.map((x) => {
             const {
-              title, description, id, location, company, category, salary_is_predicted,
+              title,
+              description,
+              id,
+              location,
+              company,
+              category,
+              salary_is_predicted,
             } = x;
             return (
               <div className="flex justify-center" key={id}>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import Spinners from '../../components/spinners';
-import { selectAllJobs } from './searchSlice';
+import { selectAllJobs } from '../redux/search/searchSlice';
+import Spinners from './spinners';
 
 const SearchIndex = () => {
   const { search } = useSelector(selectAllJobs);

@@ -4,6 +4,6 @@ export const countries = [
   'za',
 ];
 
-export const appkey = '435bffa38c3d08401d32f1f7d6cee349';
+export const appkey = '8bb9bc129b5d9f80cfbcff5c987dad86';
 
-export const appId = 'fc0074c8';
+export const appId = '62dad8c2';

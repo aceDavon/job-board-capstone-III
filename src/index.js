@@ -7,7 +7,7 @@ import App from './App';
 import 'tw-elements';
 import Welcome from './welcome';
 import Store from './redux/configureStore';
-import CategoryIndex from './redux/category/categoryIndex';
+import CategoryIndex from './components/categoryIndex';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

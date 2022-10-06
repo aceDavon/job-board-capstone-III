@@ -2,8 +2,8 @@ import { render } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import App from '../../App';
+import CategoryIndex from '../../components/categoryIndex';
 import Welcome from '../../welcome';
-import CategoryIndex from '../category/categoryIndex';
 import Store from '../configureStore';
 
 describe('test for all components', () => {
