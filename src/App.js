@@ -4,7 +4,6 @@ import { Outlet } from 'react-router-dom';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import { fetchCategory } from './redux/category/categorySlice';
-import SearchIndex from './redux/search/searchIndex';
 
 function App() {
   const dispatch = useDispatch();
@@ -14,7 +13,6 @@ function App() {
   return (
     <>
       <Header />
-      <SearchIndex />
       <Outlet />
       <Footer />
     </>

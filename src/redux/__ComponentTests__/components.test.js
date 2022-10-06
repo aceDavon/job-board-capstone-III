@@ -29,7 +29,7 @@ describe('test for all components', () => {
           <Routes>
             <Route element={<App />} path="/">
               <Route path="/category">
-                <Route path=":tag" element={<CategoryIndex />} />
+                <Route path=":id" element={<CategoryIndex />} />
               </Route>
             </Route>
           </Routes>

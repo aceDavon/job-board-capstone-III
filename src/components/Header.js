@@ -1,21 +1,27 @@
 import React from 'react';
-import { useDispatch } from 'react-redux';
-import { SearchJobs } from '../redux/search/searchSlice';
+import { useDispatch, useSelector } from 'react-redux';
+import {
+  clearStatus, filterJobs, SearchJobs, selectAllJobs,
+} from '../redux/search/searchSlice';
+import { countries } from './common/data';
 
 const Header = () => {
   const dispatch = useDispatch();
-  const [value, setValue] = React.useState({
-    page: '',
-    country: '',
-  });
+  const { jobs } = useSelector(selectAllJobs);
+  const [value, setValue] = React.useState([]);
 
-  const countries = [
-    'gb', 'au', 'at', 'br', 'ca', 'de', 'fr', 'in', 'it', 'nl', 'nz', 'pl', 'ru', 'sg', 'us', 'za',
-  ];
+  React.useEffect(() => {
+    countries.map((x) => dispatch(SearchJobs(x)));
+  }, [dispatch]);
 
-  const handleClick = (e) => (setValue({ ...value, [e.target.name]: e.target.value }));
+  const handleChange = (e) => {
+    setValue(
+      jobs.filter((x) => x.title.toLowerCase().includes(e.target.value.toLowerCase())),
+    );
+    dispatch(filterJobs(value));
 
-  const handleSubmit = () => dispatch(SearchJobs(value));
+    return e.target.value === '' && dispatch(clearStatus());
+  };
 
   return (
     <div>
@@ -145,39 +151,12 @@ const Header = () => {
               <div>
                 <div className="flex justify-center">
                   <input
-                    type="number"
-                    placeholder="filter Jobs page number"
-                    className="px-2 rounded-md"
+                    type="text"
+                    placeholder="Filter Jobs by title"
+                    className="px-2 py-2 w-96 rounded-md border border-blue-600"
                     name="page"
-                    onChange={(e) => handleClick(e)}
+                    onChange={(e) => handleChange(e)}
                   />
-                  {/* select dropdown */}
-                  <div className="m-3 w-28">
-                    <select
-                      className="form-select appearance-none block w-full px-3 py-2 text-base font-normal  text-gray-700  bg-white bg-clip-padding bg-no-repeat border border-solid border-gray-300 rounded transition ease-in-out m-0  focus:text-gray-700 focus:bg-white focus:border-blue- focus:outline-none cursor-pointer"
-                      aria-label="Default select example"
-                      name="country"
-                      onChange={(e) => handleClick(e)}
-                    >
-                      <option defaultValue="">Region</option>
-                      {countries.map((x) => (
-                        <option value={x} key={x}>
-                          {x}
-                        </option>
-                      ))}
-                    </select>
-                  </div>
-                </div>
-                <div className="w-full mt-4">
-                  <button
-                    type="button"
-                    className="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
-                    data-bs-toggle="modal"
-                    data-bs-target="#exampleModalScrollable"
-                    onClick={() => handleSubmit()}
-                  >
-                    Search
-                  </button>
                 </div>
               </div>
             </div>

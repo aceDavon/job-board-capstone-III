@@ -17,7 +17,7 @@ root.render(
         <Route path="/" element={<App />}>
           <Route element={<Welcome />} index />
           <Route path="/category">
-            <Route path=":tag" element={<CategoryIndex />} />
+            <Route path=":id" element={<CategoryIndex />} />
           </Route>
         </Route>
       </Routes>
