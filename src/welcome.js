@@ -28,7 +28,7 @@ const Welcome = () => {
             } = x;
             return (
               <div className="flex justify-center" key={id}>
-                <div className="block p-6 rounded-lg shadow-lg bg-white even:bg-gray-100 w-40 lg:w-64 grow">
+                <div className="block p-6 rounded-lg shadow-lg bg-white even:bg-gray-100 w-full lg:w-64 grow">
                   <div className="border-b px-2 py-1 mb-4 flex flex-col">
                     <span className="text-xs font-thin text-slate-400">
                       {location.display_name}
